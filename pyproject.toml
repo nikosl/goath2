@@ -1,6 +1,6 @@
 [tool.isort]
 profile = "black"
-src_paths = ["templatepython", "tests"]
+src_paths = ["goath2", "tests"]
 
 [tool.mypy]
 disallow_incomplete_defs = true
@@ -11,17 +11,22 @@ namespace_packages = true
 show_error_codes = true
 
 [tool.poetry]
-name = "templatepython"
+name = "goath2"
 version = "0.1.0"
-description = "Template repository for Python projects"
-authors = ["Brendon Smith <br3ndonland@protonmail.com>"]
+description = ""
+authors = ["Nikos Leivadaris <nikosleiv@gmail.com>"]
 license = "MIT"
-homepage = "https://github.com/br3ndonland/template-python"
+homepage = "https://github.com/nikosl/goath2"
+repository = "https://github.com/nikosl/goath2"
+keywords = ["google"]
 readme = "README.md"
-include = ["templatepython/py.typed"]
+include = ["goath2/py.typed"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.8"
+click = "^8.0.4"
+google-auth-httplib2 = "^0.1.0"
+google-auth-oauthlib = "^0.5.1"
 
 [tool.poetry.dev-dependencies]
 black = {version = "*", allow-prereleases = true}

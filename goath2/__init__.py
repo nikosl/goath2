@@ -1,5 +1,5 @@
 """
-templatepython
+goath2
 ---
 """
 from importlib.metadata import version
