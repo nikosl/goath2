@@ -1,6 +1,6 @@
 from goath2 import __version__, package_version
 
-current_version = "0.1.0-alpha"
+current_version = "0.1.0"
 
 
 def test_package_version() -> None:
