@@ -3,7 +3,7 @@ name: ci
 on:
   pull_request:
   push:
-    branches: [develop, main]
+    branches: [dev, main]
     tags:
       - "[0-9]+.[0-9]+.[0-9]+*"
   workflow_dispatch:
@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.9", "3.10"]
+        python-version: ["3.8", "3.10"]
     env:
       CODECOV_UPLOAD: false
       PIPX_VERSION: "0.16.4"

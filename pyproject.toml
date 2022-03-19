@@ -12,7 +12,7 @@ show_error_codes = true
 
 [tool.poetry]
 name = "goath2"
-version = "0.1.0"
+version = "0.1.0-alpha"
 description = ""
 authors = ["Nikos Leivadaris <nikosleiv@gmail.com>"]
 license = "MIT"
@@ -21,6 +21,9 @@ repository = "https://github.com/nikosl/goath2"
 keywords = ["google"]
 readme = "README.md"
 include = ["goath2/py.typed"]
+
+[tool.poetry.scripts]
+goath2 = "goath2.console:main"
 
 [tool.poetry.dependencies]
 python = "^3.8"
@@ -38,11 +41,21 @@ pre-commit = "^2.8"
 pytest = "^6.2"
 pytest-cov = "^3"
 pytest-mock = "^3.3"
+python-semantic-release = "^7.27.0"
 
 [tool.pytest.ini_options]
 addopts = "-q"
 minversion = "6.0"
 testpaths = ["tests"]
+
+[tool.semantic_release]
+version_variable = [
+    "pyproject.toml:tool.poetry.version"
+]
+branch = "main"
+upload_to_pypi = false
+upload_to_release = true
+build_command = "poetry build"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
